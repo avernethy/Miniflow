@@ -61,7 +61,15 @@ class Linear(Node):
 
         Your code goes here!
         """
-        pass
+        output_val = 0
+        node_test=[]
+        for nodes in self.inbound_nodes:
+            node_test.append(nodes)
+        print(node_test[1].value[1])
+        for i, test_val in enumerate(node_test[0].value):
+            output_val += node_test[0].value[i]*node_test[1].value[i]
+        self.value = output_val+node_test[2].value
+
 
 
 
