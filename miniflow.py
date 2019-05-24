@@ -58,6 +58,11 @@ class Add(Node):
 
         Your code here!
         """
+        sum_inputs = 0
+        for n in self.inbound_nodes:
+            sum_inputs+=n.value
+        self.value =  sum_inputs
+
 
 
 """
